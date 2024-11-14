@@ -1,9 +1,35 @@
+import { useEffect, useState, useRef } from "react";
 import searchIcon from "../../assets/icons/search.svg";
 
 const DomainSearchBar: React.FC = () => {
+  const [isFixed, setIsFixed] = useState(false);
+  const elementRef = useRef(null);
+  const originalOffsetTop = useRef(0);
+
+  useEffect(() => {
+    if (elementRef.current) {
+      originalOffsetTop.current =
+        elementRef.current.getBoundingClientRect().top + window.scrollY;
+    }
+
+    const handleScroll = () => {
+      if (window.scrollY >= originalOffsetTop.current) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <>
-    <div className="flex items-center justify-center w-full px-4">
+    <div
+      className={`flex items-center justify-center w-full px-4 z-50
+       ${isFixed ? "fixed top-3" : "relative"}
+        `}
+      ref={elementRef}
+    >
       <div className="flex items-center border border-gray-300 rounded-md overflow-hidden w-full my-5">
         <input
           type="text"
@@ -15,7 +41,6 @@ const DomainSearchBar: React.FC = () => {
         </button>
       </div>
     </div>
-    </>
   );
 };
 
