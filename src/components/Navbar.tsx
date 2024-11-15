@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { HiChevronDown } from "react-icons/hi";
+import {Link} from "react-router-dom";
 
+import { HiChevronDown } from "react-icons/hi";
 import goDaddyTextLogo from "../assets/logos/text-logo.svg";
 import goDaddyLogo from "../assets/logos/logo.svg";
 
@@ -87,7 +88,8 @@ const Navbar: React.FC = () => {
 
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-60 p-4 text-gray-700 z-40">
-                <h1>Sanity Check</h1>
+                <Link to="/login" className="w-full">Log In</Link>
+                <h1 className="w-full">Sign Up</h1>
               </div>
             )}
           </div>
