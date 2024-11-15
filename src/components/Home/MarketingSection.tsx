@@ -1,3 +1,5 @@
+import marketingSectionImage from "../../assets/marketing-section.jpg";
+
 const MarketingSection: React.FC = () => {
   const cards = [
     {
@@ -22,6 +24,7 @@ const MarketingSection: React.FC = () => {
         Grow your brand with Websites + Marketing.
       </h1>
 
+      <img src={marketingSectionImage} alt="Description" className="max-w-[88%] m-10 self-center"/>
       <div className="flex flex-grow p-10 items-stretch">
         {cards.map((card) => {
           return (
