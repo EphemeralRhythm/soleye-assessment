@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { HiChevronDown } from "react-icons/hi";
 import goDaddyTextLogo from "../assets/logos/text-logo.svg";
@@ -81,15 +81,23 @@ const Navbar: React.FC = () => {
               Sign In{" "}
               <HiChevronDown
                 className={`inline ml-1
-              ${isDropdownOpen ? 'rotate-180' : 'rotate-0' }
+              ${isDropdownOpen ? "rotate-180" : "rotate-0"}
               `}
               />
             </h3>
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-60 p-4 text-gray-700 z-40">
-                <Link to="/login" className="w-full">Log In</Link>
-                <h1 className="w-full">Sign Up</h1>
+              <div className="flex flex-col absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-60 p-4 text-gray-700 z-40">
+                <div className="w-full hover:bg-gray-100">
+                  <Link to="/login" className="w-full block">
+                    Log In
+                  </Link>
+                </div>
+                <div className="w-full hover:bg-gray-100">
+                  <Link to="/register" className="w-full block">
+                    Sign Up
+                  </Link>
+                </div>
               </div>
             )}
           </div>

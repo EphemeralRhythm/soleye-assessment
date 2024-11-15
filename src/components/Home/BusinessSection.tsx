@@ -30,7 +30,7 @@ const BusinessSection: React.FC = () => {
         {selectedTab === "Domains" && (
           <>
             <div
-              className="flex-grow p-5 bg-blue-300"
+              className="flex-grow p-5 bg-blue-300 flex flex-col justify-between"
             >
               <h1 className="font-bold text-3xl">Domains</h1>
               <p className="my-5">
@@ -38,15 +38,17 @@ const BusinessSection: React.FC = () => {
                 domain privacy protection forever.
               </p>
 
-              <button className="">Search Domains</button>
+              <button className="bg-gray-950 text-white p-2 rounded-lg">Search Domains</button>
             </div>
 
-            <div className="flex-grow p-5 bg-gray-200">
+            <div className="flex-grow p-5 bg-gray-200 flex flex-col justify-between">
               <h1 className="font-bold text-3xl">.co for 0.01$/1st year</h1>
               <p className="my-5">
                 Ensure your company and website stand out with a .co domain.
                 3-year purchase required. Additional year(s) ‪47.99 $‬.
               </p>
+
+              <button className="bg-gray-950 text-white p-2 rounded-lg">Get Started</button>
             </div>
           </>
         )}
