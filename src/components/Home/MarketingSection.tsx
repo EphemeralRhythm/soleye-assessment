@@ -25,7 +25,7 @@ const MarketingSection: React.FC = () => {
       </h1>
 
       <img src={marketingSectionImage} alt="Description" className="max-w-[88%] m-10 self-center"/>
-      <div className="flex flex-grow p-10 items-stretch">
+      <div className="flex flex-col md:flex-row flex-grow p-10 items-stretch">
         {cards.map((card) => {
           return (
             <div className="bg-gray-100 m-2 p-5 flex flex-col gap-3 rounded-2xl">
