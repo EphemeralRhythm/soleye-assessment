@@ -1,10 +1,13 @@
 import DomainSearchBar from "../components/Home/DomainSearchBar";
+import HeroSection from "../components/Home/HeroSectoin";
+import Navbar from "../components/Navbar";
 
 const Home: React.FC = () => {
   return (
     <>
-      <DomainSearchBar/>
-      <h1>Home</h1>;
+      <Navbar />
+      <DomainSearchBar />
+      <HeroSection />
     </>
   );
 };

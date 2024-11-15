@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             </h3>
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-60 p-4 text-gray-700">
+              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-60 p-4 text-gray-700 z-40">
                 <h1>Sanity Check</h1>
               </div>
             )}

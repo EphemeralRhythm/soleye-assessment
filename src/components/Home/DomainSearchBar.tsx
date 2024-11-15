@@ -25,8 +25,9 @@ const DomainSearchBar: React.FC = () => {
 
   return (
     <div
-      className={`flex items-center justify-center w-full px-4 z-50
-       ${isFixed ? "fixed top-3" : "relative"}
+      className={`flex items-center justify-center w-full px-10 z-20 bg-white 
+        transform transition-transform duration-300
+       ${isFixed ? "fixed top-0" : "relative"}
         `}
       ref={elementRef}
     >
