@@ -19,11 +19,11 @@ const HeroSection: React.FC = () => {
       md:my-0 md:mx-3"
       >
         <div className="flex flex-col items-left text-left justify-around h-full p-5">
-          <span className="bg-cyan-300 w-fit m-3 rounded p-1 fon-sans font-light text-sm tracking-wide">
+          <span className="bg-cyan-300 w-fit rounded p-1 fon-sans font-light text-sm tracking-wide">
             NEW
           </span>
           <h3 className="text-white text-sm my-4">AI Suggested Domains</h3>
-          <h2 className="text-white font-serif text-xl max-w-80 tracking-wide font-bold">
+          <h2 className="text-white font-serif text-xl max-w-[70%] md:max-w-80 tracking-wide font-bold">
             Find the perfect domain and business name with AI.
           </h2>
         </div>
